@@ -1,4 +1,5 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:map_location_routes/config/prod_config.dart';
 import 'package:map_location_routes/data/external_models/directions_view_model.dart';
 import 'package:map_location_routes/data/local_models/app_client.dart';
 import 'package:map_location_routes/data/local_models/custom_excepcion_model.dart';
@@ -6,8 +7,6 @@ import 'package:map_location_routes/data/local_models/custom_excepcion_model.dar
 class DirectionsProvider {
   static const String _baseUrl =
       'https://maps.googleapis.com/maps/api/directions/json?';
-  
-  static const String apiKey = '';
 
   final AppClient _dio;
 
@@ -22,7 +21,7 @@ class DirectionsProvider {
       queryParameters: {
         'origin': '${origin.latitude},${origin.longitude}',
         'destination': '${destination.latitude},${destination.longitude}',
-        'key': apiKey,
+        'key': ProdConfig.googleApiKey,
       },
     );
 
