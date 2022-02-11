@@ -44,3 +44,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Config
+/lib/config/
+/android/app/src/main/res/values/strings.xml

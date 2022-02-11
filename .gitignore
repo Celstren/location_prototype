@@ -47,3 +47,4 @@ app.*.map.json
 
 # Config
 /lib/config/
+/android/app/src/main/res/values/config_strings.xml
